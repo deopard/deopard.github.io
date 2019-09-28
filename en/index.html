@@ -1,14 +1,23 @@
 <!doctype html>
 <html>
-	<head>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148949053-1"></script>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+gtag('config', 'UA-148949053-1');
+    </script>
 
-	<title>Tom Kim</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
 
-	<style>
-	body {
+    <title>Tom Kim</title>
+
+    <style>
+body {
   background: #EEEEEE;
   font: 12px "Times New Roman", Times, sans-serif;
   line-height: 1.4;
@@ -115,262 +124,262 @@ a {
   page-break-inside: avoid;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: 0;
-    font-size: 14px;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0.5em 1em;
-    border: none;
-  }
-  .sectionContent {
-    width: 100%;
-  }
-  .sectionContent .date {
-    padding-right: 2em;
-  }
-  .sectionName {
-    width: auto;
-  }
-  .largeFont {
-    font-size: 20px;
-  }
-  .smallFont {
-    font-size: 14px;
-  }
-}
+      /* Media Queries */
+      @media only screen and (max-width: 40em) {
+        body {
+          margin: 0;
+          font-size: 14px;
+        }
+        #resume {
+          margin: 0 auto;
+          max-width: 600px;
+          padding: 0.5em 1em;
+          border: none;
+        }
+        .sectionContent {
+          width: 100%;
+        }
+        .sectionContent .date {
+          padding-right: 2em;
+        }
+        .sectionName {
+          width: auto;
+        }
+        .largeFont {
+          font-size: 20px;
+        }
+        .smallFont {
+          font-size: 14px;
+        }
+      }
 
-@media print {
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0px 0px;
-    border: 0px;
-    background: #fff;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-  }
+      @media print {
+        #resume {
+          margin: 0 auto;
+          max-width: 600px;
+          padding: 0px 0px;
+          border: 0px;
+          background: #fff;
+          box-shadow: none;
+          -webkit-box-shadow: none;
+        }
 
-  a {
-    color: black;
-  }
-}
+        a {
+          color: black;
+        }
+      }
 
-	</style>
+    </style>
 
-	</head>
-	<body>
+  </head>
+  <body>
 
-	<div id='resume'>
-  <div id='nameBlock' class='largeFont'>
-    <span class='name'>
-      Tom Kim,
-    </span>
-    <span class='label'>Software Engineer</span>
-  </div>
-  <div id='basicsBlock' class='smallFont'>
-    <div class='contactBlock'>
-      <span class='email'>ekagud@gmail.com</span>
-        <span class='divider'>|</span>
-        <span class='address'>
-          Seoul, KR
+    <div id='resume'>
+      <div id='nameBlock' class='largeFont'>
+        <span class='name'>
+          Tom Kim,
         </span>
-    </div>
-      <div id='profilesBlock'>
-            <span class='url'>
-              <a href='https://github.com/deopard'>https://github.com/deopard</a>
-            </span>
-            
+        <span class='label'>Software Engineer</span>
       </div>
-  </div>
-  <div class='sectionLine'></div>
+      <div id='basicsBlock' class='smallFont'>
+        <div class='contactBlock'>
+          <span class='email'>ekagud@gmail.com</span>
+          <span class='divider'>|</span>
+          <span class='address'>
+            Seoul, KR
+          </span>
+        </div>
+        <div id='profilesBlock'>
+          <span class='url'>
+            <a href='https://github.com/deopard'>https://github.com/deopard</a>
+          </span>
 
-
-  <div id='workBlock' class="sectionBlock">
-    <div class='sectionName'>
-      <span>EXPERIENCE</span>
-    </div>
-    <div class='sectionContent'>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          DRAMA&amp;COMPANY, Server/Web team Leader
-	        </span>
-	        <span class='date'>
-	          2015-01 &mdash; Present
-	        </span>
-	      </div>
-	      <div><a href='http://dramancompany.com'>http://dramancompany.com</a></div>
-	      <ul class='highlights'>
-	        <li>South Korea&#x27;s No.1 Business card management, recruiting application with 3M users. Acquired by Naver Corp, Line+ Corp in 2017</li>
-	        <li>Developed API, Infrastructure, DevOps</li>
-	        <li>Developed Web, Desktop version</li>
-	        <li>Developed Daily newsletter Remember Now</li>
-	        <li>Developed Japanese version of Remember</li>
-	        <li>Managed team of front/back-end developers</li>
-	      </ul>
-	      <div class='separator'></div>
-			</div>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          MirageWorks Inc., Web/Server developer(Sr. Researcher)
-	        </span>
-	        <span class='date'>
-	          2010-04 &mdash; 2014-09
-	        </span>
-	      </div>
-	      <div><a href='http://www.mirageworks.co.kr'>http://www.mirageworks.co.kr</a></div>
-	      <ul class='highlights'>
-	        <li>Network separation security solution company.</li>
-	        <li>Developed admin system for network separation security solution called MirageWorks</li>
-	        <li>Developed interworking system with groupware of companies such as Samsung</li>
-	      </ul>
-	      
-			</div>
-    </div>
-  </div>
-  <div class='sectionLine'></div>
-
-	<div id='publications'>
-    <div class='sectionName'>
-      <span>PUBLICATIONS</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='blockHeader'>
-        <span class='title'>
-          Author of &quot;Guide to easy AWS infrastructure development&quot;, Wikibooks
-        </span>
-        <span class='date'>
-          <span class='releaseDate'>2019-01</span>
-        </span>
-      </div>
-      <div class='website'>
-        <a href='https://book.naver.com/bookdb/book_detail.nhn?bid=14457016'>https://book.naver.com/bookdb/book_detail.nhn?bid=14457016</a>
-      </div>
-      <ul class='highlights'>
-        <li>Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD)</li>
-      </ul>
-      <div class='separator'></div>
-      <div class='blockHeader'>
-        <span class='title'>
-          Instructor of &quot;Mastering the Production Server Management&quot;(1th~3rd class), Fast Campus
-        </span>
-        <span class='date'>
-          <span class='releaseDate'>2017</span>
-        </span>
-      </div>
-      <div class='website'>
-        <a href='https://www.fastcampus.co.kr/dev_workshop_opsfse/'>https://www.fastcampus.co.kr/dev_workshop_opsfse/</a>
-      </div>
-      <ul class='highlights'>
-        <li>Lecture about server management using AWS. Classes for an average of 20 working students.</li>
-      </ul>
-      
-    </div>
-	</div>
-  <div class='sectionLine'></div>
-
-
-
-	<div id='education' class="sectionBlock">
-    <div class='sectionName'>
-      <span>EDUCATION</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='educationBlock'>
-        <span class='title'>
-          Sogang University
-        </span>
-        <span class='date'>
-          2008-03 &mdash; 2015-02
-        </span>
-        <div class=''>
-          Bachelor of Science in Engineering  - Computer Science
         </div>
       </div>
-      
-    </div>
-	</div>
-  <div class='sectionLine'></div>
+      <div class='sectionLine'></div>
 
-	<div id='skills' class="sectionBlock">
-    <div class='sectionName'>
-      <span>SKILLS</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='skillBlock'>
-        <span class='title'>Server Development:</span>
-          <span>Ruby on Rails</span>, 
-          <span>TDD</span>, 
-          <span>Node.js</span>, 
-          <span>ASP.NET</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Web Development:</span>
-          <span>HTML</span>, 
-          <span>SASS</span>, 
-          <span>AngularJS</span>, 
-          <span>React</span>, 
-          <span>Electron</span>, 
-          <span>Wordpress</span>, 
-          <span>Backbone.js</span>, 
-          <span>jQuery</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Infrastructure Management:</span>
-          <span>AWS</span>, 
-          <span>DevOps</span>, 
-          <span>Jenkins</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Development Culture:</span>
-          <span>Code Review</span>, 
-          <span>Pair programming</span>, 
-          <span>Retrospect</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Startup:</span>
-          <span>MVP</span>, 
-          <span>Recruiting</span>
-      </div>
-    </div>
-	</div>
-  <div class='sectionLine'></div>
 
-	<div id='languages' class="sectionBlock">
-    <div class='sectionName'>
-      <span>LANGUAGES</span>
-    </div>
-    <div class='sectionContent'>
-      <span class='language'>English</span>
-      <span class='fluency'><em>(Fluent)</em></span>
-      <span>,</span>
-      <span class='language'>Korean</span>
-      <span class='fluency'><em>(Native speaker)</em></span>
-      
-    </div>
-    <div class='sectionLine'></div>
-	</div>
+      <div id='workBlock' class="sectionBlock">
+        <div class='sectionName'>
+          <span>EXPERIENCE</span>
+        </div>
+        <div class='sectionContent'>
+          <div class="jobBlock">
+            <div class='blockHeader'>
+              <span class='title'>
+                DRAMA&amp;COMPANY, Server/Web team Leader
+              </span>
+              <span class='date'>
+                2015-01 &mdash; Present
+              </span>
+            </div>
+            <div><a href='http://dramancompany.com'>http://dramancompany.com</a></div>
+            <ul class='highlights'>
+              <li>South Korea&#x27;s No.1 Business card management, recruiting application with 3M users. Acquired by Naver Corp, Line+ Corp in 2017</li>
+              <li>Developed API, Infrastructure, DevOps</li>
+              <li>Developed Web, Desktop version</li>
+              <li>Developed Daily newsletter Remember Now</li>
+              <li>Developed Japanese version of Remember</li>
+              <li>Managed team of front/back-end developers</li>
+            </ul>
+            <div class='separator'></div>
+          </div>
+          <div class="jobBlock">
+            <div class='blockHeader'>
+              <span class='title'>
+                MirageWorks Inc., Web/Server developer(Sr. Researcher)
+              </span>
+              <span class='date'>
+                2010-04 &mdash; 2014-09
+              </span>
+            </div>
+            <div><a href='http://www.mirageworks.co.kr'>http://www.mirageworks.co.kr</a></div>
+            <ul class='highlights'>
+              <li>Network separation security solution company.</li>
+              <li>Developed admin system for network separation security solution called MirageWorks</li>
+              <li>Developed interworking system with groupware of companies such as Samsung</li>
+            </ul>
 
-	<div id='interests' class="sectionBlock">
-    <div class='sectionName'>
-      <span>INTERESTS</span>
-    </div>
-    <div class='sectionContent'>
-      <span class='name'>Writing</span><!--
-      --><span>, </span>
-      <span class='name'>Education</span><!--
-      --><span>, </span>
-      <span class='name'>Photography</span><!--
-      -->
-    </div>
-    <div class='sectionLine'></div>
-	</div>
+          </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
 
-	</body>
+      <div id='publications'>
+        <div class='sectionName'>
+          <span>PUBLICATIONS</span>
+        </div>
+        <div class='sectionContent'>
+          <div class='blockHeader'>
+            <span class='title'>
+              Author of &quot;Guide to easy AWS infrastructure development&quot;, Wikibooks
+            </span>
+            <span class='date'>
+              <span class='releaseDate'>2019-01</span>
+            </span>
+          </div>
+          <div class='website'>
+            <a href='https://book.naver.com/bookdb/book_detail.nhn?bid=14457016'>https://book.naver.com/bookdb/book_detail.nhn?bid=14457016</a>
+          </div>
+          <ul class='highlights'>
+            <li>Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD)</li>
+          </ul>
+          <div class='separator'></div>
+          <div class='blockHeader'>
+            <span class='title'>
+              Instructor of &quot;Mastering the Production Server Management&quot;(1th~3rd class), Fast Campus
+            </span>
+            <span class='date'>
+              <span class='releaseDate'>2017</span>
+            </span>
+          </div>
+          <div class='website'>
+            <a href='https://www.fastcampus.co.kr/dev_workshop_opsfse/'>https://www.fastcampus.co.kr/dev_workshop_opsfse/</a>
+          </div>
+          <ul class='highlights'>
+            <li>Lecture about server management using AWS. Classes for an average of 20 working students.</li>
+          </ul>
+
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+
+
+
+      <div id='education' class="sectionBlock">
+        <div class='sectionName'>
+          <span>EDUCATION</span>
+        </div>
+        <div class='sectionContent'>
+          <div class='educationBlock'>
+            <span class='title'>
+              Sogang University
+            </span>
+            <span class='date'>
+              2008-03 &mdash; 2015-02
+            </span>
+            <div class=''>
+              Bachelor of Science in Engineering  - Computer Science
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+
+      <div id='skills' class="sectionBlock">
+        <div class='sectionName'>
+          <span>SKILLS</span>
+        </div>
+        <div class='sectionContent'>
+          <div class='skillBlock'>
+            <span class='title'>Server Development:</span>
+            <span>Ruby on Rails</span>,
+            <span>TDD</span>,
+            <span>Node.js</span>,
+            <span>ASP.NET</span>
+          </div>
+          <div class='skillBlock'>
+            <span class='title'>Web Development:</span>
+            <span>HTML</span>,
+            <span>SASS</span>,
+            <span>AngularJS</span>,
+            <span>React</span>,
+            <span>Electron</span>,
+            <span>Wordpress</span>,
+            <span>Backbone.js</span>,
+            <span>jQuery</span>
+          </div>
+          <div class='skillBlock'>
+            <span class='title'>Infrastructure Management:</span>
+            <span>AWS</span>,
+            <span>DevOps</span>,
+            <span>Jenkins</span>
+          </div>
+          <div class='skillBlock'>
+            <span class='title'>Development Culture:</span>
+            <span>Code Review</span>,
+            <span>Pair programming</span>,
+            <span>Retrospect</span>
+          </div>
+          <div class='skillBlock'>
+            <span class='title'>Startup:</span>
+            <span>MVP</span>,
+            <span>Recruiting</span>
+          </div>
+        </div>
+      </div>
+      <div class='sectionLine'></div>
+
+      <div id='languages' class="sectionBlock">
+        <div class='sectionName'>
+          <span>LANGUAGES</span>
+        </div>
+        <div class='sectionContent'>
+          <span class='language'>English</span>
+          <span class='fluency'><em>(Fluent)</em></span>
+          <span>,</span>
+          <span class='language'>Korean</span>
+          <span class='fluency'><em>(Native speaker)</em></span>
+
+        </div>
+        <div class='sectionLine'></div>
+      </div>
+
+      <div id='interests' class="sectionBlock">
+        <div class='sectionName'>
+          <span>INTERESTS</span>
+        </div>
+        <div class='sectionContent'>
+          <span class='name'>Writing</span><!--
+          --><span>, </span>
+          <span class='name'>Education</span><!--
+          --><span>, </span>
+          <span class='name'>Photography</span><!--
+          -->
+        </div>
+        <div class='sectionLine'></div>
+      </div>
+
+  </body>
 </html>
