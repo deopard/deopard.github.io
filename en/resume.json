@@ -25,7 +25,7 @@
   "work": [
     {
       "company": "DRAMA&COMPANY",
-      "position": "Server/Web team Leader",
+      "position": "Engineering Department Leader",
       "website": "http://dramancompany.com",
       "startDate": "2015-01",
       "summary": "South Korea's No.1 Business card management, recruiting application with 3M users. Acquired by Naver Corp, Line+ Corp in 2017",
@@ -34,7 +34,10 @@
         "Developed Web, Desktop version",
         "Developed Daily newsletter Remember Now",
         "Developed Japanese version of Remember",
-        "Managed team of front/back-end developers"
+        "Managed team of 10+ front/back-end developers",
+        "Web Developer (2015-01~2016-04)",
+        "Server Developer (2016-04~2019-06)",
+        "Server/Web team Leader (2019-06~2020-12)"
       ]
     },
     {
@@ -94,9 +97,7 @@
         "AngularJS",
         "React",
         "Electron",
-        "Wordpress",
-        "Backbone.js",
-        "jQuery"
+        "Wordpress"
       ]
     },
     {
@@ -107,8 +108,7 @@
     {
       "name": "Development Culture",
       "level": null,
-      "keywords": ["Code Review", "Pair programming", "Retrospect"]
-    },
+      "keywords": ["Code Review", "Pair programming", "Retrospect"] },
     {
       "name": "Startup",
       "level": null,
@@ -137,12 +137,6 @@
     {
       "name": "Photography",
       "keywords": []
-    }
-  ],
-  "references": [
-    {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
     }
   ]
 }

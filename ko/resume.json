@@ -25,7 +25,7 @@
   "work": [
     {
       "company": "DRAMA&COMPANY",
-      "position": "Server/Web Team Leader",
+      "position": "개발실 Leader",
       "website": "http://dramancompany.com",
       "startDate": "2015-01",
       "endDate": null,
@@ -35,7 +35,10 @@
         "웹 버전, 데스크톱 버전 개발",
         "경제 뉴스레터 리멤버 나우 개발",
         "리멤버 일본 서비스 개발",
-        "Front/Back-end 개발자들로 구성된 팀 관리"
+        "Front/Back-end 개발자들로 구성된 10명 이상의 팀 관리",
+        "웹 개발자 (2015-01~2016-04)",
+        "서버 개발자 (2016-04~2019-06)",
+        "Server/Web팀 Leader (2019-06~2020-12)"
       ]
     },
     {
@@ -92,9 +95,7 @@
         "AngularJS",
         "React",
         "Electron",
-        "Wordpress",
-        "Backbone.js",
-        "jQuery"
+        "Wordpress"
       ]
     },
     {
