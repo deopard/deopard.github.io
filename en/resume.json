@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Tom Kim",
-    "label": "Software Engineer",
+    "label": "Sr. Software Engineer",
     "picture": null,
     "email": "ekagud@gmail.com",
     "phone": null,
@@ -108,7 +108,8 @@
     {
       "name": "Development Culture",
       "level": null,
-      "keywords": ["Code Review", "Pair programming", "Retrospect"] },
+      "keywords": ["Code Review", "Pair programming", "Retrospect"]
+    },
     {
       "name": "Startup",
       "level": null,
