@@ -1,54 +1,52 @@
 {
   "basics": {
     "name": "김담형",
-    "label": "Sr. Software Engineer",
-    "picture": null,
+    "label": "Software Engineer",
     "email": "ekagud@gmail.com",
-    "phone": null,
-    "website": null,
-    "summary": null,
+    "url": "https://thetomkim.com",
     "location": {
-      "address": null,
-      "postalCode": null,
       "city": "서울",
-      "countryCode": "대한민국",
-      "region": null
+      "countryCode": "KR"
     },
     "profiles": [
       {
         "network": "GitHub",
         "username": "deopard",
         "url": "https://github.com/deopard"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "thetomkim",
+        "url": "https://www.linkedin.com/in/thetomkim"
       }
     ]
   },
   "work": [
     {
-      "company": "DRAMA&COMPANY",
+      "name": "DRAMA&COMPANY",
       "position": "개발실 Leader",
-      "website": "http://dramancompany.com",
+      "url": "http://dramancompany.com",
       "startDate": "2015-01",
-      "endDate": null,
-      "summary": "대한민국 300만 직장인이 사용하고 있는 1등 명함 관리, 비즈니스 앱. 2017년 네이버/라인플러스에 인수됨",
+      "summary": "대한민국 350만 직장인이 사용하고 있는 비즈니스 플랫폼 리멤버 개발. 2017년 네이버/라인플러스에 인수됨",
       "highlights": [
-        "API, 인프라, DevOps 개발",
-        "웹 버전, 데스크톱 버전 개발",
-        "경제 뉴스레터 리멤버 나우 개발",
-        "리멤버 일본 서비스 개발",
-        "Front/Back-end 개발자들로 구성된 10명 이상의 팀 관리",
-        "웹 개발자 (2015-01~2016-04)",
-        "서버 개발자 (2016-04~2019-06)",
-        "Server/Web팀 Leader (2019-06~2020-12)"
+        "시리즈A 단계에서 합류하여 추가 투자 및 인수 후 단계까지 기여",
+        "회사의 개발 관련 의사결정자로 제품 개발 프로세스, 조직 구조 정의 및 개선, 개발 로드맵 수립",
+        "리멤버 서비스 아키텍처 구성 및 다양한 서비스 개발(Ruby on Rails, MySQL, Redis, AWS, AngularJS, WordPress)",
+        "DevOps 구축 (AWS, Jenkins, Docker, ELK, Terraform, NewRelic)",
+        "리멤버 일본 서비스 myBridge 개발"
       ]
     },
     {
-      "company": "MirageWorks",
+      "name": "MirageWorks",
       "position": "웹/서버 개발자(책임 연구원)",
-      "website": "http://mirageworks.co.kr",
+      "url": "http://mirageworks.co.kr",
       "startDate": "2010-04",
       "endDate": "2014-09",
-      "summary": "망분리 보안 솔루션 미라지웍스를 위한 관리자 시스템 개발",
-      "highlights": ["삼성 등 기업들의 그룹웨어와 연동 시스템 개발"]
+      "summary": "기업용 망분리 보안 솔루션 미라지웍스 개발",
+      "highlights": [
+        "망분리 보안 솔루션의 관리자 시스템 개발(ASP.NET, MSSQL, Backbone.js, jQuery)",
+        "삼성 등 여러 기업의 그룹웨어와 연동 시스템 개발"
+      ]
     }
   ],
   "volunteer": [],
@@ -59,6 +57,7 @@
       "studyType": "학사",
       "startDate": "2008-03",
       "endDate": "2015-02",
+      "url": "https://sogang.ac.kr/",
       "gpa": null,
       "courses": []
     }
@@ -69,26 +68,32 @@
       "name": "서비스 운영이 쉬워지는 AWS 인프라 구축 가이드 저자",
       "publisher": "위키북스",
       "releaseDate": "2019-01",
-      "website": "https://book.naver.com/bookdb/book_detail.nhn?bid=14457016",
+      "url": "https://book.naver.com/bookdb/book_detail.nhn?bid=14457016",
       "summary": "AWS를 이용한 서버 운영 관리 방법에 대한 가이드(인프라 구축, 배포, 모니터링, 자동화 등)"
     },
     {
       "name": "운영서버관리 마스터 워크샵 강사 (1~3기)",
       "publisher": "패스트캠퍼스",
       "releaseDate": "2017",
-      "website": "https://www.fastcampus.co.kr/dev_workshop_opsfse/",
+      "url": "https://www.fastcampus.co.kr/dev_workshop_opsfse/",
       "summary": "AWS를 이용한 운영 서버 관리 가이드 강의. 수업당 약 20명의 현업 수강생들을 대상으로 진행"
+    },
+    {
+      "name": "회사 개발 블로그",
+      "publisher": "DRAMA&COMPANY",
+      "url": "https://blog.dramancompany.com/author/tom/",
+      "summary": "업무 내용 정리"
     }
   ],
   "skills": [
     {
       "name": "서버 개발",
-      "level": null,
-      "keywords": ["Ruby on Rails", "TDD", "Node.js", "ASP.NET"]
+      "level": "",
+      "keywords": ["Ruby on Rails", "TDD", "Node.js", "TypeScript", "ASP.NET"]
     },
     {
       "name": "웹 개발",
-      "level": null,
+      "level": "",
       "keywords": [
         "HTML",
         "SASS",
@@ -99,19 +104,27 @@
       ]
     },
     {
-      "name": "인프라 관리",
-      "level": null,
-      "keywords": ["AWS", "DevOps", "Jenkins"]
+      "name": "Infra 및 DevOps",
+      "level": "",
+      "keywords": [
+        "AWS",
+        "Jenkins",
+        "Docker",
+        "ELK",
+        "Terraform",
+        "NewRelic",
+        "SlackBot"
+      ]
     },
     {
       "name": "개발 문화",
-      "level": null,
-      "keywords": ["코드 리뷰", "페어 프로그래밍", "회고"]
+      "level": "",
+      "keywords": ["코드 리뷰", "1on1", "페어 프로그래밍", "회고", "애자일"]
     },
     {
       "name": "스타트업",
       "level": "",
-      "keywords": ["MVP", "리쿠르팅"]
+      "keywords": ["팀 빌딩", "제품 개발 프로세스", "MVP"]
     }
   ],
   "languages": [
@@ -123,15 +136,15 @@
   "interests": [
     {
       "name": "글쓰기",
-      "keywords": []
+      "keywords": ["블로그", "책"]
     },
     {
       "name": "교육",
-      "keywords": []
+      "keywords": ["강의"]
     },
     {
       "name": "사진",
-      "keywords": []
+      "keywords": ["vsco"]
     }
   ],
   "references": []
