@@ -1,381 +1,488 @@
-<!doctype html>
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Tom Kim</title>
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+    <style>:root {
+  color-scheme: light dark;
 
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+  --color-background: #ffffff;
+  --color-primary: #212529;
+  --color-secondary: #95a5a6;
+  --color-muted: #f4f6f6;
+  --color-accent: #f1c40f;
+  --color-link: #2ecc71;
 
-	<title>Tom Kim</title>
+  --scale-ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--scale-ratio));
+  --scale2: calc(var(--scale1) * var(--scale-ratio));
+  --scale3: calc(var(--scale2) * var(--scale-ratio));
+  --scale4: calc(var(--scale3) * var(--scale-ratio));
+  --scale5: calc(var(--scale4) * var(--scale-ratio));
+}
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;800&display=swap" rel="stylesheet">
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #181a1b;
+    --color-primary: #d1cdc7;
+    --color-secondary: #aaa398;
+    --color-muted: #1e2021;
+  }
+}
 
-	<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
 body {
-  background: #EEEEEE;
-  font-family: 'Nanum Gothic', sans-serif;
-  font-size: 12px;
-  line-height: 1.4;
-  margin: 40px 0;
+  background: var(--color-background);
+  color: var(--color-primary);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
 }
-em {
-  color: #999;
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
 }
-p {
-  line-height: 1.4;
-}
+
+ol,
 ul {
-  margin-bottom: 0;
+  padding-left: 1em;
 }
-li {
-  margin-bottom: 2px;
+
+li + li {
+  margin-top: 0.4em;
 }
+
+li::marker,
+.network {
+  color: var(--color-secondary);
+}
+
 a {
+  color: var(--color-link);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
-#resume {
+a:focus,
+a:hover {
+  color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--color-accent);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--color-muted);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--color-secondary);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+svg {
+  margin-right: 0.2em;
+  vertical-align: -0.2em;
+}
+
+.masthead {
+  background: var(--color-muted);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  text-align: center;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+.masthead > img {
+  border-radius: 50%;
   margin: 0 auto;
-  max-width: 600px;
-  padding: 80px 100px;
-  background: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 4px #aaa;
-  -webkit-box-shadow: 2px 2px 4px #aaa;
+  max-width: 12em;
 }
 
-.coursesList {
-  width: 28%;
-  vertical-align: top;
-  display: inline-block;
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
 }
 
-.largeFont {
-  font-size: 20px;
+.stack {
+  display: grid;
+  gap: 1.5em;
 }
 
-.smallFont {
-  font-size: 12px;
+.icon-list {
+  list-style: none;
+  padding: 0;
 }
 
-.sectionBlock {
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.spaced-list {
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.sectionName {
-  width: 18%;
-  vertical-align: top;
-  display: inline-block;
+.spaced-list::before {
+  border-bottom: 1px solid var(--color-muted);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
 }
 
-.sectionContent {
-  width: 80%;
-  vertical-align: top;
-  display: inline-block;
+.spaced-list > :nth-child(2) {
+  order: 2;
 }
 
-.sectionContent ul {
-  padding-left: 20px;
-  margin-top: 6px;
-  list-style-type: circle;
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
 }
 
-.sectionContent .title {
-  font-weight: bold;
+.tag-list > li {
+  background: var(--color-muted);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
 }
 
-.sectionContent .date {
-  float: right;
-}
-
-.sectionContent .separator {
-  height: 14px;
-}
-
-.sectionLine {
-  border-style: dashed;
-  border-width: 1px;
-  border-color: #CFCFCF;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.divider {
-  font-weight: bold;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.summary {
-  margin-top: 6px;
-}
-
-.skillBlock {
-  margin-bottom: 4px;
-}
-
-.jobBlock {
-  page-break-inside: avoid;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 40em) {
-  body {
-    margin: 0;
-    font-size: 14px;
-  }
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0.5em 1em;
-    border: none;
-  }
-  .sectionContent {
-    width: 100%;
-  }
-  .sectionContent .date {
-    padding-right: 2em;
-  }
-  .sectionName {
-    width: auto;
-  }
-  .largeFont {
-    font-size: 20px;
-  }
-  .smallFont {
-    font-size: 14px;
-  }
-}
-
-@media print {
-  #resume {
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 0px 0px;
-    border: 0px;
-    background: #fff;
-    box-shadow: none;
-    -webkit-box-shadow: none;
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
   }
 
-  a {
-    color: black;
+  .masthead {
+    text-align: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  .masthead img {
+    grid-column: side;
+    grid-row: span 2;
+    max-width: 100%;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
-
-	</style>
-
-	</head>
-	<body>
-
-	<div id='resume'>
-  <div id='nameBlock' class='largeFont'>
-    <span class='name'>
-      Tom Kim,
-    </span>
-    <span class='label'>Sr. Software Engineer</span>
-  </div>
-  <div id='basicsBlock' class='smallFont'>
-    <div class='contactBlock'>
-      <span class='email'>ekagud@gmail.com</span>
-        <span class='divider'>|</span>
-        <span class='address'>
-          Seoul, KR
-        </span>
-    </div>
-      <div id='profilesBlock'>
-            <span class='url'>
-              <a href='https://github.com/deopard'>https://github.com/deopard</a>
-            </span>
-
-      </div>
-  </div>
-  <div class='sectionLine'></div>
-
-
-  <div id='workBlock' class="sectionBlock">
-    <div class='sectionName'>
-      <span>EXPERIENCE</span>
-    </div>
-    <div class='sectionContent'>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          DRAMA&amp;COMPANY, Engineering Department Leader
-	        </span>
-	        <span class='date'>
-	          2015-01 &mdash; Present
-	        </span>
-	      </div>
-	      <div><a href='http://dramancompany.com'>http://dramancompany.com</a></div>
-	      <ul class='highlights'>
-	        <li>South Korea&#x27;s No.1 Business card management, recruiting application with 3M users. Acquired by Naver Corp, Line+ Corp in 2017</li>
-	        <li>Developed API, Infrastructure, DevOps</li>
-	        <li>Developed Web, Desktop version</li>
-	        <li>Developed Daily newsletter Remember Now</li>
-	        <li>Developed Japanese version of Remember</li>
-	        <li>Managed team of 10+ front/back-end developers</li>
-	        <li>Web Developer (2015-01~2016-04)</li>
-	        <li>Server Developer (2016-04~2019-06)</li>
-	        <li>Server/Web team Leader (2019-06~2020-12)</li>
-	      </ul>
-	      <div class='separator'></div>
-			</div>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          MirageWorks Inc., Web/Server developer(Sr. Researcher)
-	        </span>
-	        <span class='date'>
-	          2010-04 &mdash; 2014-09
-	        </span>
-	      </div>
-	      <div><a href='http://www.mirageworks.co.kr'>http://www.mirageworks.co.kr</a></div>
-	      <ul class='highlights'>
-	        <li>Network separation security solution company.</li>
-	        <li>Developed admin system for network separation security solution called MirageWorks</li>
-	        <li>Developed interworking system with groupware of companies such as Samsung</li>
-	      </ul>
-
-			</div>
-    </div>
-  </div>
-  <div class='sectionLine'></div>
-
-	<div id='publications'>
-    <div class='sectionName'>
-      <span>PUBLICATIONS</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='blockHeader'>
-        <span class='title'>
-          Author of &quot;Guide to easy AWS infrastructure development&quot;, Wikibooks
-        </span>
-        <span class='date'>
-          <span class='releaseDate'>2019-01</span>
-        </span>
-      </div>
-      <div class='website'>
-        <a href='https://book.naver.com/bookdb/book_detail.nhn?bid=14457016'>https://book.naver.com/bookdb/book_detail.nhn?bid=14457016</a>
-      </div>
-      <ul class='highlights'>
-        <li>Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD)</li>
-      </ul>
-      <div class='separator'></div>
-      <div class='blockHeader'>
-        <span class='title'>
-          Instructor of &quot;Mastering the Production Server Management&quot;(1th~3rd class), Fast Campus
-        </span>
-        <span class='date'>
-          <span class='releaseDate'>2017</span>
-        </span>
-      </div>
-      <div class='website'>
-        <a href='https://www.fastcampus.co.kr/dev_workshop_opsfse/'>https://www.fastcampus.co.kr/dev_workshop_opsfse/</a>
-      </div>
-      <ul class='highlights'>
-        <li>Lecture about server management using AWS. Classes for an average of 20 working students.</li>
-      </ul>
-
-    </div>
-	</div>
-  <div class='sectionLine'></div>
-
-
-
-	<div id='education' class="sectionBlock">
-    <div class='sectionName'>
-      <span>EDUCATION</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='educationBlock'>
-        <span class='title'>
-          Sogang University
-        </span>
-        <span class='date'>
-          2008-03 &mdash; 2015-02
-        </span>
-        <div class=''>
-          Bachelor of Science in Engineering  - Computer Science
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+        <div>
+            <h1>Tom Kim</h1>
+            <h2>Software Engineer</h2>
         </div>
-      </div>
+        <ul class="icon-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Seoul, South Korea
+              </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:ekagud@gmail.com">ekagud@gmail.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              <a href="https://thetomkim.com">thetomkim.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <a href="https://github.com/deopard">deopard</a>
+                <span class="network">(GitHub)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <a href="https://www.linkedin.com/in/thetomkim">thetomkim</a>
+                <span class="network">(LinkedIn)</span>
+            </li>
+        </ul>
+      </header>
 
-    </div>
-	</div>
-  <div class='sectionLine'></div>
-
-	<div id='skills' class="sectionBlock">
-    <div class='sectionName'>
-      <span>SKILLS</span>
-    </div>
-    <div class='sectionContent'>
-      <div class='skillBlock'>
-        <span class='title'>Server Development:</span>
-          <span>Ruby on Rails</span>,
-          <span>TDD</span>,
-          <span>Node.js</span>,
-          <span>ASP.NET</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Web Development:</span>
-          <span>HTML</span>,
-          <span>SASS</span>,
-          <span>AngularJS</span>,
-          <span>React</span>,
-          <span>Electron</span>,
-          <span>Wordpress</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Infrastructure Management:</span>
-          <span>AWS</span>,
-          <span>DevOps</span>,
-          <span>Jenkins</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Development Culture:</span>
-          <span>Code Review</span>,
-          <span>Pair programming</span>,
-          <span>Retrospect</span>
-      </div>
-      <div class='skillBlock'>
-        <span class='title'>Startup:</span>
-          <span>MVP</span>,
-          <span>Recruiting</span>
-      </div>
-    </div>
-	</div>
-  <div class='sectionLine'></div>
-
-	<div id='languages' class="sectionBlock">
-    <div class='sectionName'>
-      <span>LANGUAGES</span>
-    </div>
-    <div class='sectionContent'>
-      <span class='language'>English</span>
-      <span class='fluency'><em>(Fluent)</em></span>
-      <span>,</span>
-      <span class='language'>Korean</span>
-      <span class='fluency'><em>(Native speaker)</em></span>
-
-    </div>
-    <div class='sectionLine'></div>
-	</div>
-
-	<div id='interests' class="sectionBlock">
-    <div class='sectionName'>
-      <span>INTERESTS</span>
-    </div>
-    <div class='sectionContent'>
-      <span class='name'>Writing</span><!--
-      --><span>, </span>
-      <span class='name'>Education</span><!--
-      --><span>, </span>
-      <span class='name'>Photography</span><!--
-      -->
-    </div>
-    <div class='sectionLine'></div>
-	</div>
-
-	</body>
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Engineering Department Leader</h4>
+                  <span>
+                    <time datetime="2015-01">Jan 2015</time> –
+                    Present
+                  </span>
+                </div>
+                <strong><a href="http://dramancompany.com">DRAMA&amp;COMPANY</a></strong>
+              </header>
+                <p>A company that provides South Korea's business platform service 'Remember' with 3.5M businesspeople. Acquired by Naver Corp, Line+ Corp in 2017</p>
+                <ul>
+                    <li>Joined at series A phase and participated in further investments and post-acquisition phases</li>
+                    <li>Define and improve the product development process, organizational structure, and establish a development roadmap as the company&#x27;s development-related decision maker</li>
+                    <li>Active candidate searching and meetings for recruitment</li>
+                    <li>Design Remember service&#x27;s architecture and develop various services(Ruby on Rails, MySQL, Redis, AWS, AngularJS, WordPress)</li>
+                    <li>Build DevOps environments(AWS, Jenkins, Docker, ELK, Terraform, NewRelic)</li>
+                    <li>Develop Japanese version of Remember called myBridge</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Web/Server developer(Sr. Researcher)</h4>
+                  <span>
+                    <time datetime="2010-04">Apr 2010</time> –
+                    <time datetime="2014-09">Sep 2014</time>
+                  </span>
+                </div>
+                <strong><a href="http://www.mirageworks.co.kr">MirageWorks Inc.</a></strong>
+              </header>
+                <p>Enterprise network separation security solution company</p>
+                <ul>
+                    <li>Developed admin system for network separation security solution called MirageWorks(ASP.NET, MSSQL, Backbone.js, jQuery)</li>
+                    <li>Developed interworking system with groupware of companies such as Samsung</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4><a href="https://sogang.ac.kr/">Sogang University</a></h4>
+                  <span>
+                    <time datetime="2008-03">Mar 2008</time> –
+                    <time datetime="2015-02">Feb 2015</time>
+                  </span>
+                </div>
+                  <strong>Computer Science</strong>
+              </header>
+                <p>Bachelor of Science in Engineering</p>
+            </article>
+        </div>
+      </section>
+      <section id="publications">
+        <h3>Publications</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4><a href="https://book.naver.com/bookdb/book_detail.nhn?bid&#x3D;14457016">Author of &quot;Guide to easy AWS infrastructure development&quot;</a></h4>
+                    <time datetime="2019-01">Jan 2019</time>
+                </div>
+                  <span>
+                    Published by <strong>Wikibooks</strong>
+                  </span>
+              </header>
+                <p>Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD)</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4><a href="https://www.fastcampus.co.kr/dev_workshop_opsfse/">Instructor of &quot;Mastering the Production Server Management&quot;(1st~3rd class)</a></h4>
+                    <time datetime="2017">Jan 2017</time>
+                </div>
+                  <span>
+                    Published by <strong>Fast Campus</strong>
+                  </span>
+              </header>
+                <p>Lecture about server management using AWS. Classes for an average of 20 working students.</p>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4><a href="https://blog.dramancompany.com/author/tom/">Company Tech Blog</a></h4>
+                </div>
+                  <span>
+                    Published by <strong>DRAMA&amp;COMPANY</strong>
+                  </span>
+              </header>
+                <p>Posts related to work</p>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Server Development</h4>
+                <ul class="tag-list">
+                    <li>Ruby on Rails</li>
+                    <li>TDD</li>
+                    <li>Node.js</li>
+                    <li>TypeScript</li>
+                    <li>ASP.NET</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Web Development</h4>
+                <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>SASS</li>
+                    <li>AngularJS</li>
+                    <li>React</li>
+                    <li>Electron</li>
+                    <li>Wordpress</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Infrastructure &amp; DevOps</h4>
+                <ul class="tag-list">
+                    <li>AWS</li>
+                    <li>Jenkins</li>
+                    <li>Docker</li>
+                    <li>ELK</li>
+                    <li>Terraform</li>
+                    <li>NewRelic</li>
+                    <li>SlackBot</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Development Culture</h4>
+                <ul class="tag-list">
+                    <li>Code Review</li>
+                    <li>1on1</li>
+                    <li>Pair programming</li>
+                    <li>Retrospect</li>
+                    <li>Agile</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Startup</h4>
+                <ul class="tag-list">
+                    <li>Team Building</li>
+                    <li>SW Development Process</li>
+                    <li>MVP</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Fluent
+            </div>
+            <div>
+                <h4>Korean</h4>
+              Native speaker
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Writing</h4>
+                <ul class="tag-list">
+                    <li>Blog</li>
+                    <li>Book</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Education</h4>
+                <ul class="tag-list">
+                    <li>Lecture</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Photography</h4>
+                <ul class="tag-list">
+                    <li>vsco</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+  </body>
 </html>

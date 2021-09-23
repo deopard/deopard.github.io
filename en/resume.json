@@ -1,54 +1,51 @@
 {
   "basics": {
     "name": "Tom Kim",
-    "label": "Sr. Software Engineer",
-    "picture": null,
+    "label": "Software Engineer",
     "email": "ekagud@gmail.com",
-    "phone": null,
-    "website": "http://github.com/deopard",
-    "summary": null,
+    "url": "https://thetomkim.com",
     "location": {
-      "address": null,
-      "postalCode": null,
       "city": "Seoul",
-      "countryCode": "KR",
-      "region": null
+      "countryCode": "KR"
     },
     "profiles": [
       {
         "network": "GitHub",
         "username": "deopard",
         "url": "https://github.com/deopard"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "thetomkim",
+        "url": "https://www.linkedin.com/in/thetomkim"
       }
     ]
   },
   "work": [
     {
-      "company": "DRAMA&COMPANY",
+      "name": "DRAMA&COMPANY",
       "position": "Engineering Department Leader",
-      "website": "http://dramancompany.com",
+      "url": "http://dramancompany.com",
       "startDate": "2015-01",
-      "summary": "South Korea's No.1 Business card management, recruiting application with 3M users. Acquired by Naver Corp, Line+ Corp in 2017",
+      "summary": "A company that provides South Korea's business platform service 'Remember' with 3.5M businesspeople. Acquired by Naver Corp, Line+ Corp in 2017",
       "highlights": [
-        "Developed API, Infrastructure, DevOps",
-        "Developed Web, Desktop version",
-        "Developed Daily newsletter Remember Now",
-        "Developed Japanese version of Remember",
-        "Managed team of 10+ front/back-end developers",
-        "Web Developer (2015-01~2016-04)",
-        "Server Developer (2016-04~2019-06)",
-        "Server/Web team Leader (2019-06~2020-12)"
+        "Joined at series A phase and participated in further investments and post-acquisition phases",
+        "Define and improve the product development process, organizational structure, and establish a development roadmap as the company's development-related decision maker",
+        "Active candidate searching and meetings for recruitment",
+        "Design Remember service's architecture and develop various services(Ruby on Rails, MySQL, Redis, AWS, AngularJS, WordPress)",
+        "Build DevOps environments(AWS, Jenkins, Docker, ELK, Terraform, NewRelic)",
+        "Develop Japanese version of Remember called myBridge"
       ]
     },
     {
-      "company": "MirageWorks Inc.",
+      "name": "MirageWorks Inc.",
       "position": "Web/Server developer(Sr. Researcher)",
-      "website": "http://www.mirageworks.co.kr",
+      "url": "http://www.mirageworks.co.kr",
       "startDate": "2010-04",
       "endDate": "2014-09",
-      "summary": "Network separation security solution company.",
+      "summary": "Enterprise network separation security solution company",
       "highlights": [
-        "Developed admin system for network separation security solution called MirageWorks",
+        "Developed admin system for network separation security solution called MirageWorks(ASP.NET, MSSQL, Backbone.js, jQuery)",
         "Developed interworking system with groupware of companies such as Samsung"
       ]
     }
@@ -61,6 +58,7 @@
       "studyType": "Bachelor of Science in Engineering",
       "startDate": "2008-03",
       "endDate": "2015-02",
+      "url": "https://sogang.ac.kr/",
       "gpa": null,
       "courses": []
     }
@@ -71,26 +69,32 @@
       "name": "Author of \"Guide to easy AWS infrastructure development\"",
       "publisher": "Wikibooks",
       "releaseDate": "2019-01",
-      "website": "https://book.naver.com/bookdb/book_detail.nhn?bid=14457016",
+      "url": "https://book.naver.com/bookdb/book_detail.nhn?bid=14457016",
       "summary": "Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD)"
     },
     {
-      "name": "Instructor of \"Mastering the Production Server Management\"(1th~3rd class)",
+      "name": "Instructor of \"Mastering the Production Server Management\"(1st~3rd class)",
       "publisher": "Fast Campus",
       "releaseDate": "2017",
-      "website": "https://www.fastcampus.co.kr/dev_workshop_opsfse/",
+      "url": "https://www.fastcampus.co.kr/dev_workshop_opsfse/",
       "summary": "Lecture about server management using AWS. Classes for an average of 20 working students."
+    },
+    {
+      "name": "Company Tech Blog",
+      "publisher": "DRAMA&COMPANY",
+      "url": "https://blog.dramancompany.com/author/tom/",
+      "summary": "Posts related to work"
     }
   ],
   "skills": [
     {
       "name": "Server Development",
-      "level": null,
-      "keywords": ["Ruby on Rails", "TDD", "Node.js", "ASP.NET"]
+      "level": "",
+      "keywords": ["Ruby on Rails", "TDD", "Node.js", "TypeScript", "ASP.NET"]
     },
     {
       "name": "Web Development",
-      "level": null,
+      "level": "",
       "keywords": [
         "HTML",
         "SASS",
@@ -101,19 +105,33 @@
       ]
     },
     {
-      "name": "Infrastructure Management",
-      "level": null,
-      "keywords": ["AWS", "DevOps", "Jenkins"]
+      "name": "Infrastructure & DevOps",
+      "level": "",
+      "keywords": [
+        "AWS",
+        "Jenkins",
+        "Docker",
+        "ELK",
+        "Terraform",
+        "NewRelic",
+        "SlackBot"
+      ]
     },
     {
       "name": "Development Culture",
-      "level": null,
-      "keywords": ["Code Review", "Pair programming", "Retrospect"]
+      "level": "",
+      "keywords": [
+        "Code Review",
+        "1on1",
+        "Pair programming",
+        "Retrospect",
+        "Agile"
+      ]
     },
     {
       "name": "Startup",
-      "level": null,
-      "keywords": ["MVP", "Recruiting"]
+      "level": "",
+      "keywords": ["Team Building", "SW Development Process", "MVP"]
     }
   ],
   "languages": [
@@ -129,15 +147,16 @@
   "interests": [
     {
       "name": "Writing",
-      "keywords": []
+      "keywords": ["Blog", "Book"]
     },
     {
       "name": "Education",
-      "keywords": []
+      "keywords": ["Lecture"]
     },
     {
       "name": "Photography",
-      "keywords": []
+      "keywords": ["vsco"]
     }
-  ]
+  ],
+  "references": []
 }
