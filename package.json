@@ -8,7 +8,7 @@
     "preexport": "npm run validate",
     "export-ko": "resume export ko/index --theme even --resume ko/resume.json --format html",
     "export-en": "resume export en/index --theme even --resume en/resume.json --format html",
-    "export": "npm run export-ko && npm run export-en"
+    "export": "npm run export-ko && npm run export-en && cp en/index.html index.html"
   },
   "dependencies": {
     "jsonresume-theme-elegant": "^1.14.0",
