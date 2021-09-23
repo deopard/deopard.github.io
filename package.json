@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "validate-ko": "resume validate --theme even --resume ko/resume.json",
+    "validate-en": "resume validate --theme even --resume en/resume.json",
+    "validate": "npm run validate-ko && npm run validate-en",
+    "serve-ko": "resume serve --theme even --resume ko/resume.json",
+    "serve-en": "resume serve --theme even --resume en/resume.json",
+    "preexport": "npm run validate",
+    "export-ko": "resume export ko/index --theme even --resume ko/resume.json --format html",
+    "export-en": "resume export en/index --theme even --resume en/resume.json --format html",
+    "export": "npm run export-ko && npm run export-en"
+  },
+  "dependencies": {
+    "jsonresume-theme-elegant": "^1.14.0",
+    "jsonresume-theme-even": "^0.12.0"
+  }
+}
