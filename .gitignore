@@ -1,6 +1,5 @@
 node_modules
 ko/public/
 en/public/
-package.json
 package-lock.json
 public/
