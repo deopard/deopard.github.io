@@ -4,6 +4,7 @@
     "label": "Software Engineer",
     "email": "ekagud@gmail.com",
     "url": "https://thetomkim.com",
+    "summary": "With over 10 years of software development experience in a wide range of hands-on experiences from front-end web, server to infrastructure. Has a high overall understanding of product development, including culture, organization, and process. 7 years of experience contributing to growing a startup company from series A to D. Enjoy growing the company and growing with my colleagues along the way. Self-motivated and a quick learner.",
     "location": {
       "city": "Seoul",
       "countryCode": "KR"
@@ -25,16 +26,20 @@
     {
       "name": "DRAMA&COMPANY",
       "position": "Engineering Department Leader",
-      "url": "http://dramancompany.com",
+      "url": "https://dramancompany.com",
       "startDate": "2015-01",
-      "summary": "A company that provides South Korea's business platform service 'Remember' with 3.5M businesspeople. Acquired by Naver Corp, Line+ Corp in 2017",
+      "summary": "A company that provides South Korea's business platform service 'Remember' with over 3.5M businesspeople",
       "highlights": [
-        "Joined at series A phase and participated in further investments and post-acquisition phases",
-        "Define and improve the product development process, organizational structure, and establish a development roadmap as the company's development-related decision maker",
-        "Active candidate searching and meetings for recruitment",
-        "Design Remember service's architecture and develop various services(Ruby on Rails, MySQL, Redis, AWS, AngularJS, WordPress)",
-        "Build DevOps environments(AWS, Jenkins, Docker, ELK, Terraform, NewRelic)",
-        "Develop Japanese version of Remember called myBridge"
+        "As the top decision-maker in the software development organization, define the development culture, organizational structure, and work processes, and determine CEO and developer compensation.",
+        "Led a TF that changed company organizational structure from a functional organization to cross-functional teams",
+        "For active recruiting, directly requested tea meetings through various channels and held tea meetings with more than 40 developers",
+        "Designed models and services architectures that were the basis of most services. Transited to MSA for growing services and organization size",
+        "Changed a project based on fixture+minitest to FactoryBot+Rspec for easy maintenance of test code. Currently, there are more than 10K test codes managed in server projects.",
+        "Built a CI/CD environment from scratch. Reduced test code execution time from more than 3 hours to less than 15 minutes and automated manual deployments that took more than 30 minutes",
+        "As the kjcompany's AWS manager, reduced 20% or more per month through cost savings",
+        "To verify the hypothesis, developed several MVP projects such as new home screen and internal profile search site usually within 2 days.",
+        "Developed various services in Remember and the Japanese version of Remember (myBridge)",
+        "10+ company blog posts"
       ]
     },
     {
@@ -70,7 +75,7 @@
       "publisher": "Wikibooks",
       "releaseDate": "2019-01",
       "url": "https://book.naver.com/bookdb/book_detail.nhn?bid=14457016",
-      "summary": "Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD)"
+      "summary": "Guide about server management using AWS(Infrastructure development, Deployment, Monitoring, CI/CD). Best Seller."
     },
     {
       "name": "Instructor of \"Mastering the Production Server Management\"(1st~3rd class)",
@@ -93,7 +98,7 @@
       "keywords": ["Ruby on Rails", "TDD", "Node.js", "TypeScript", "ASP.NET"]
     },
     {
-      "name": "Web Development",
+      "name": "Front-end Web Development",
       "level": "",
       "keywords": [
         "HTML",
